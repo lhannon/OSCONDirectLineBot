@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="sftsrc" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Source\\Workspaces\\core-DirectLine\\DirectLineBot\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Source\\Workspaces\\core-DirectLine\\DirectLineBot\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

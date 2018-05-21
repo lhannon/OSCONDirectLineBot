@@ -1,0 +1,12 @@
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\bin\Debug\DirectLineSampleClient.exe.config
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\bin\Debug\DirectLineSampleClient.exe
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\bin\Debug\DirectLineSampleClient.pdb
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\bin\Debug\Microsoft.Bot.Connector.DirectLine.dll
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\bin\Debug\Newtonsoft.Json.dll
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\bin\Debug\Newtonsoft.Json.xml
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.csprojResolveAssemblyReference.cache
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.csproj.CoreCompileInputs.cache
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.csproj.CopyComplete
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.exe
+C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.pdb
