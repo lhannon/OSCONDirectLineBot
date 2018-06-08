@@ -8,6 +8,8 @@
     using System.Web.Http;
     using Microsoft.Bot.Builder.Dialogs;
     using Microsoft.Bot.Connector;
+    using Microsoft.ApplicationInsights.TraceListener;
+    using System.Diagnostics;
 
     [BotAuthentication]
     public class MessagesController : ApiController
@@ -16,14 +18,17 @@
         /// POST: api/Messages
         /// Receive a message from a user and reply to it
         /// </summary>
-        public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
+        public async Task<HttpResponseMessage> Post([FromBody]Microsoft.Bot.Connector.Activity activity)
         {
+            Trace.TraceInformation($"MessagesController.Post received activity with text {activity.Text}");
             if (activity.Type == ActivityTypes.Message)
             {
+                Trace.TraceInformation($"MessageController.Post Calling SendAsync with {activity.Text} because activityType == ActivityType.Messages is true");
                 await Conversation.SendAsync(activity, () => new DirectLineBotDialog());
             }
             else
             {
+                Trace.TraceInformation($"MessageController.Post Calling HandleSystemMessage with {activity.Text} because activityType is {activity.Type}");
                 await this.HandleSystemMessage(activity);
             }
 
@@ -31,8 +36,9 @@
             return response;
         }
 
-        private async Task HandleSystemMessage(Activity message)
+        private async Task HandleSystemMessage(Microsoft.Bot.Connector.Activity message)
         {
+            Trace.TraceInformation($"HandleSystemMessage received message.text {message.Text}");
             if (message.Type == ActivityTypes.DeleteUserData)
             {
                 // Implement user deletion here
@@ -46,7 +52,8 @@
 
                     var reply = message.CreateReply();
 
-                    reply.Text = "I am the DirectlineBot. I received a message in the MessagesController and my Message.Type is " + message.Type;
+                    reply.Text = $"You have reached the DirectLine bot with Message of type {message.Type}. ";
+                    reply.Text += (message.Text.Length == 0) ? "Message is empty." : message.Text;
 
                     await client.Conversations.ReplyToActivityAsync(reply);
                     return;
@@ -65,15 +72,7 @@
             {
             }
 
-          
-            ConnectorClient defaultClient = new ConnectorClient(new Uri(message.ServiceUrl));
-
-            var defaultReply = message.CreateReply();
-
-            defaultReply.Text = "I am the DirectlineBot. I received a message in the MessagesController and my Message.Type is " + message.Type;
-
-            await defaultClient.Conversations.ReplyToActivityAsync(defaultReply);
-            
+                    
         }
     }
 }
