@@ -24,14 +24,15 @@
             if (activity.Type == ActivityTypes.Message)
             {
                 Trace.TraceInformation($"MessageController.Post Calling SendAsync with {activity.Text} because activityType == ActivityType.Messages is true");
-                await Conversation.SendAsync(activity, () => new DirectLineBotDialog());
+             //   await Conversation.SendAsync(activity, () => new DirectLineBotDialog());
+               await Conversation.SendAsync(activity, () => new LuisDialog());
             }
             else
             {
                 Trace.TraceInformation($"MessageController.Post Calling HandleSystemMessage with {activity.Text} because activityType is {activity.Type}");
                 await this.HandleSystemMessage(activity);
             }
-
+            
             var response = Request.CreateResponse(HttpStatusCode.OK);
             return response;
         }

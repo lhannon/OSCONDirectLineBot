@@ -20,7 +20,7 @@
             var reply = context.MakeMessage();
 
             reply.Text = $"I am the Boring Bot. I heard you say '{message.Text}'";
-            
+         //   reply.Text = "Do I look omniscient? How should I know?"; 
             await context.PostAsync(reply);
             context.Wait(this.MessageReceivedAsync);
         }

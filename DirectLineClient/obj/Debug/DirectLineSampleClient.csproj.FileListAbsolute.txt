@@ -10,3 +10,15 @@ C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSample
 C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.csproj.CopyComplete
 C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.exe
 C:\Source\Workspaces\core-DirectLine\DirectLineClient\obj\Debug\DirectLineSampleClient.pdb
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\bin\Debug\DirectLineSampleClient.exe.config
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\bin\Debug\DirectLineSampleClient.exe
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\bin\Debug\DirectLineSampleClient.pdb
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\bin\Debug\Microsoft.Bot.Connector.DirectLine.dll
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\obj\Debug\DirectLineSampleClient.csprojAssemblyReference.cache
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\obj\Debug\DirectLineSampleClient.csproj.CoreCompileInputs.cache
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\obj\Debug\DirectLineSampleClient.csproj.CopyComplete
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\obj\Debug\DirectLineSampleClient.exe
+C:\Users\laurie.hannon\Source\Repos\directlinebot\DirectLineClient\obj\Debug\DirectLineSampleClient.pdb
