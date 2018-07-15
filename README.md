@@ -1,6 +1,11 @@
-# Direct Line Bot Sample
+# Direct Line Bot Sample, modified 
 
-A sample bot and a custom client communicating to each other using the Direct Line API.
+A sample bot and a custom client communicating to each other using the Direct Line API. 
+This bot handles questions about either-or questions and randomly selects one choice.
+Built for demo at OSCON 2018.
+
+This repo was cloned from https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/core-DirectLine. Much of
+the README that follows was copied from there.
 
 [![Deploy to Azure][Deploy Button]][Deploy CSharp/DirectLine]
 
@@ -76,29 +81,6 @@ var activities = from x in activitySet.Activities
                     select x;
 ````
 
-DirectLine v3.0 (unlike version 1.1) has support for Attachments (see [Add media attachments to messages](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-media-attachments) for more information about attachments). Check out the `ReadBotMessagesAsync` method in [Program.cs](DirectLineClient/Program.cs#L75-L92) to see how the Attachments are retrieved and rendered appropriately based on their type.
-
-
-````C#
-if (activity.Attachments != null)
-{
-    foreach (Attachment attachment in activity.Attachments)
-    {
-        switch (attachment.ContentType)
-        {
-            case "application/vnd.microsoft.card.hero":
-                RenderHeroCard(attachment);
-                break;
-
-            case "image/png":
-                Console.WriteLine($"Opening the requested image '{attachment.ContentUrl}'");
-
-                Process.Start(attachment.ContentUrl);
-                break;
-        }
-    }
-}
-````
 
 
 ### Outcome
@@ -110,10 +92,6 @@ To run the sample, you'll need to run both Bot and Client apps.
 * Running Client app
     1. In the Visual Studio Solution Explorer window, right click on the **DirectLineSampleClient** project.
     2. In the contextual menu, select Debug, then Start New Instance and wait for the _Console application_ to start.
-
-To test the Attachments type `show me a hero card` or `send me a botframework image` and you should see the following outcome.
-
-![Sample Outcome](images/outcome.png)
 
 ### More Information
 
